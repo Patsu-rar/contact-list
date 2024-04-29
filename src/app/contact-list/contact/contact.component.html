@@ -1,0 +1,22 @@
+<div class="contact-item-wrapper" *ngIf="contact">
+  <div class="info-section" routerLink="{{ contact.id }}">
+    <div class="info-section-name">
+      {{ contact.first_name }} {{ contact.last_name }}
+    </div>
+    <div class="info-section-number">
+      {{ contact.phone_number }}
+    </div>
+  </div>
+  <div class="actions-section">
+    <mat-icon
+      fontIcon="edit"
+      class="action-item"
+      (click)="editContact()">
+    </mat-icon>
+    <mat-icon
+      fontIcon="delete"
+      class="action-item"
+      (click)="deleteContact()">
+    </mat-icon>
+  </div>
+</div>

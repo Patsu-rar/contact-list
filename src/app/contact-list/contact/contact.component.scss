@@ -1,0 +1,38 @@
+.contact-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 170px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 15px;
+  transition: all 0.3s ease;
+
+  .info-section {
+    transition: all 0.3s ease;
+
+    &-name {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &-number {
+      font-size: 16px;
+    }
+  }
+
+  .info-section:hover {
+    cursor: pointer;
+    color: #575757;
+  }
+
+  .actions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .action-item:hover {
+      cursor: pointer;
+    }
+  }
+}

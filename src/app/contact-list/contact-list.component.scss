@@ -1,0 +1,28 @@
+.contact-list-wrapper {
+  padding: 10px;
+
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    &-item {
+      width: max-content;
+    }
+  }
+
+  .search-control {
+    margin-left: 40px;
+    width: 82%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,56 @@
+<div class="info-dialog">
+  <h1 *ngIf="!data">Create Contact</h1>
+  <h1 *ngIf="data">Edit Contact</h1>
+
+  <form [formGroup]="profileForm" class="info-dialog-form">
+    <div>
+      <label class="info-dialog-label">First Name: </label>
+      <input matInput class="info-dialog-input" formControlName="firstName">
+      <div class="error"
+        *ngIf="profileForm.controls.firstName.invalid && profileForm.controls.firstName.touched">
+        Please enter the first name
+      </div>
+    </div>
+    <div>
+      <label class="info-dialog-label">Last Name: </label>
+      <input matInput class="info-dialog-input" formControlName="lastName">
+      <div class="error"
+           *ngIf="profileForm.controls.lastName.invalid && profileForm.controls.lastName.touched">
+        Please enter the last name
+      </div>
+    </div>
+    <div>
+      <label class="info-dialog-label">Phone Number: </label>
+      <input matInput class="info-dialog-input" formControlName="phoneNumber">
+      <div class="error"
+           *ngIf="profileForm.controls.phoneNumber.invalid && profileForm.controls.phoneNumber.touched">
+        Please enter the phone number
+      </div>
+    </div>
+    <div>
+      <label class="info-dialog-label">Birth Date: </label>
+      <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birth_date">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="month" [startAt]="startDate"></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div>
+      <label class="info-dialog-label">Email: </label>
+      <input matInput class="info-dialog-input" formControlName="email">
+      <div class="error"
+           *ngIf="profileForm.controls.email.invalid && profileForm.controls.email.touched">
+        The email is incorrect. Please try another one
+      </div>
+    </div>
+    <div>
+      <label class="info-dialog-label">Address: </label>
+      <input matInput class="info-dialog-input" formControlName="address">
+    </div>
+  </form>
+  <div class="info-dialog-actions">
+    <button mat-button class="cancel-btn" (click)="cancelEvent()">Cancel</button>
+    <button mat-button class="confirm-btn" (click)="confirmEvent()">Confirm</button>
+  </div>
+</div>

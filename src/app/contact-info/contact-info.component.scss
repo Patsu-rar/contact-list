@@ -1,0 +1,30 @@
+.contact-info-wrapper {
+  padding: 15px;
+
+  .contact-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .back-btn {
+      display: flex;
+      align-items: center;
+
+      &-text {
+        padding-bottom: 2px;
+      }
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &-item {
+      margin-left: 15px;
+      font-size: 18px;
+    }
+  }
+}
+
